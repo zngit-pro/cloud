@@ -1,13 +1,30 @@
-group 'org.foryou'
-version '1.0-SNAPSHOT'
+subprojects {
 
-apply plugin: 'java'
+    apply plugin: 'java'
+    apply plugin: 'war'
+    apply plugin: 'idea'
 
-sourceCompatibility = 1.8
+    group 'org.foryou'
+    version = '1.0'
 
-repositories {
-    mavenCentral()
+    repositories {
+        jcenter()
+    }
+
+    ext {
+        springboot = '2.0.3.RELEASE'
+        springcloud = '2.0.0.RELEASE'
+    }
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+
+    dependencies {
+        compile "org.springframework.boot:spring-boot-starter-web:${springboot}"
+        compile "org.springframework.boot:spring-boot-starter-tomcat:${springboot}"
+
+        testCompile "org.springframework.boot:spring-boot-starter-test:${springboot}"
+        testCompile "junit:junit:4.12"
+
+    }
 }
-dependencies {
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-}
+

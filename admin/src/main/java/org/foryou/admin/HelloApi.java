@@ -13,5 +13,5 @@ import java.util.Map;
 @FeignClient(name = "api")
 public interface HelloApi {
     @RequestMapping("/hello")
-    Map<String, String> hello(@RequestParam(value = "name") String name);
+    public Map<String, String> hello(@RequestParam(value = "name") String name);
 }

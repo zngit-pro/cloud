@@ -1,21 +1,6 @@
-apply plugin: 'java'
-apply plugin: 'war'
-
-group = 'org.foryou'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
-
-repositories {
-    jcenter()
-}
-
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web:2.0.3.RELEASE')
-    compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:2.0.0.RELEASE')
+    compile "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${springcloud}"
 
-    compile('com.google.code.gson:gson:2.8.2')
-
-    compile('org.springframework.boot:spring-boot-starter-tomcat:2.0.3.RELEASE')
-    testCompile('org.springframework.boot:spring-boot-starter-test:2.0.3.RELEASE')
+    compile "com.google.code.gson:gson:2.8.2"
 }
 

@@ -1,26 +1,10 @@
-apply plugin: 'java'
-apply plugin: 'war'
-
-group = 'org.foryou'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
-
-repositories {
-    jcenter()
-}
-
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web:2.0.3.RELEASE')
-    compile('org.springframework.cloud:spring-cloud-starter-config:2.0.0.RELEASE')
-    compile('org.springframework.cloud:spring-cloud-starter-openfeign:2.0.0.RELEASE')
-    compile('org.springframework.boot:spring-boot-starter-tomcat:2.0.3.RELEASE')
+
+    compile "org.springframework.cloud:spring-cloud-starter-config:${springcloud}"
+    compile "org.springframework.cloud:spring-cloud-starter-openfeign:${springcloud}"
 
     compile('com.google.code.gson:gson:2.8.2')
-
-    // https://mvnrepository.com/artifact/org.apache.httpcomponents/httpclient
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
-
-    testCompile('org.springframework.boot:spring-boot-starter-test:2.0.3.RELEASE')
 }
 
 

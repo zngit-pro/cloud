@@ -1,5 +1,2 @@
 rootProject.name = 'cloud'
-include 'config'
-include 'admin'
-include 'eureka'
-include 'api'
+include 'config', 'admin', 'eureka', 'api'

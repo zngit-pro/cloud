@@ -1,22 +1,4 @@
-apply plugin: 'java'
-apply plugin: 'war'
-
-group = 'org.foryou'
-version = '0.0.1-SNAPSHOT'
-sourceCompatibility = 1.8
-
-repositories {
-    jcenter()
-}
-
-
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter-web:2.0.3.RELEASE')
-    compile group: 'org.springframework.cloud', name: 'spring-cloud-config-server', version: '2.0.0.RELEASE'
-    compile('org.springframework.boot:spring-boot-starter-tomcat:2.0.3.RELEASE')
-
-    compile('org.springframework.boot:spring-boot-starter-tomcat:2.0.3.RELEASE')
-
-    testCompile('org.springframework.boot:spring-boot-starter-test:2.0.3.RELEASE')
+    compile "org.springframework.cloud:spring-cloud-config-server:${springcloud}"
 }
 
