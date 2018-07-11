@@ -19,7 +19,9 @@ subprojects {
     targetCompatibility = 1.8
 
     dependencies {
+        compile "org.springframework.cloud:spring-cloud-starter-config:${springcloud}"
         compile "org.springframework.boot:spring-boot-starter-web:${springboot}"
+
         compile "org.springframework.boot:spring-boot-starter-tomcat:${springboot}"
         compile "org.springframework.boot:spring-boot-devtools:${springboot}"
 
