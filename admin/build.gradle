@@ -1,8 +1,8 @@
 dependencies {
 
     compile "org.springframework.cloud:spring-cloud-starter-config:${springcloud}"
-    compile "org.springframework.cloud:spring-cloud-starter-openfeign:${springcloud}"
-
+    compile "org.springframework.cloud:spring-cloud-starter-netflix-eureka-client:${springcloud}"
+    compile "org.springframework.cloud:spring-cloud-starter-netflix-ribbon:${springcloud}"
     compile('com.google.code.gson:gson:2.8.2')
     compile group: 'org.apache.httpcomponents', name: 'httpclient', version: '4.5.2'
 }

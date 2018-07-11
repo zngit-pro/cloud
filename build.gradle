@@ -21,6 +21,7 @@ subprojects {
     dependencies {
         compile "org.springframework.boot:spring-boot-starter-web:${springboot}"
         compile "org.springframework.boot:spring-boot-starter-tomcat:${springboot}"
+        compile "org.springframework.boot:spring-boot-devtools:${springboot}"
 
         testCompile "org.springframework.boot:spring-boot-starter-test:${springboot}"
         testCompile "junit:junit:4.12"

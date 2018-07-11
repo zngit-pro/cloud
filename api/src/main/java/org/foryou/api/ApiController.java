@@ -1,10 +1,11 @@
 package org.foryou.api;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.HashMap;
-import java.util.Map;
+import java.util.List;
 
 /**
  * author 1016823429@qq.com
@@ -12,11 +13,15 @@ import java.util.Map;
  **/
 @RestController
 public class ApiController {
+
+    @Autowired
+    private DiscoveryClient discoveryClient;
+
+
     @RequestMapping("hello")
-    public Map<String, String> hello(String name) {
-        Map<String, String> map = new HashMap<>();
-        map.put("name", name);
-        return map;
+    public String hello(String name) {
+        List<String> instance = discoveryClient.getServices();
+        return instance.get(0) + ":" + name;
     }
 
 }

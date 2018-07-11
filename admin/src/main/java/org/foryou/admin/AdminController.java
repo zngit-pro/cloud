@@ -3,8 +3,7 @@ package org.foryou.admin;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-
-import java.util.Map;
+import org.springframework.web.client.RestTemplate;
 
 /**
  * author 1016823429@qq.com
@@ -14,11 +13,11 @@ import java.util.Map;
 public class AdminController {
 
     @Autowired
-    private HelloApi helloApi;
+    private RestTemplate restTemplate;
 
     @RequestMapping("user")
-    public Map<String, String> user() {
-        return helloApi.hello("api");
+    public String user() {
+        return restTemplate.getForObject("http://api/hello?name=12324", String.class);
     }
 
 }
